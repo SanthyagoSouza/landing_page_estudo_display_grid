@@ -620,10 +620,12 @@ async function carregarCSS(rota) {
     
     // Tentar diferentes caminhos para o CSS
     const possiblePaths = [
-        `./pages/css/${rota}.css`,
+        `css/${rota}.css`,
+        `./css/${rota}.css`,
+        `/css/${rota}.css`,
+        `../css/${rota}.css`,
         `pages/css/${rota}.css`,
-        `/pages/css/${rota}.css`,
-        `../pages/css/${rota}.css`
+        `./pages/css/${rota}.css`
     ];
     
     let cssLoaded = false;
