@@ -619,15 +619,21 @@ async function carregarCSS(rota) {
     }
     
     // Carregar CSS específico da página
-    const cssPath = `pages/css/${rota}.css`;
+    const cssPath = `./pages/css/${rota}.css`;
     try {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = cssPath;
-        link.id = `css-${rota}`;
-        document.head.appendChild(link);
+        // Verificar se o arquivo existe antes de carregar
+        const response = await fetch(cssPath);
+        if (response.ok) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = cssPath;
+            link.id = `css-${rota}`;
+            document.head.appendChild(link);
+        } else {
+            console.warn(`CSS não encontrado para ${rota} em: ${cssPath}`);
+        }
     } catch (error) {
-        console.warn(`CSS não encontrado para ${rota}:`, error);
+        console.warn(`Erro ao carregar CSS para ${rota}:`, error);
     }
 }
 
