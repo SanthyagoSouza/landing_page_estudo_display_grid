@@ -618,22 +618,36 @@ async function carregarCSS(rota) {
         existingCSS.remove();
     }
     
-    // Carregar CSS específico da página
-    const cssPath = `./pages/css/${rota}.css`;
-    try {
-        // Verificar se o arquivo existe antes de carregar
-        const response = await fetch(cssPath);
-        if (response.ok) {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = cssPath;
-            link.id = `css-${rota}`;
-            document.head.appendChild(link);
-        } else {
-            console.warn(`CSS não encontrado para ${rota} em: ${cssPath}`);
+    // Tentar diferentes caminhos para o CSS
+    const possiblePaths = [
+        `./pages/css/${rota}.css`,
+        `pages/css/${rota}.css`,
+        `/pages/css/${rota}.css`,
+        `../pages/css/${rota}.css`
+    ];
+    
+    let cssLoaded = false;
+    
+    for (const cssPath of possiblePaths) {
+        try {
+            const response = await fetch(cssPath);
+            if (response.ok) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = cssPath;
+                link.id = `css-${rota}`;
+                document.head.appendChild(link);
+                console.log(`CSS carregado com sucesso: ${cssPath}`);
+                cssLoaded = true;
+                break;
+            }
+        } catch (error) {
+            console.warn(`Tentativa falhada para ${cssPath}:`, error);
         }
-    } catch (error) {
-        console.warn(`Erro ao carregar CSS para ${rota}:`, error);
+    }
+    
+    if (!cssLoaded) {
+        console.warn(`Não foi possível carregar CSS para ${rota} em nenhum dos caminhos testados`);
     }
 }
 
