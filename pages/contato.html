@@ -1,5 +1,60 @@
 <link rel="stylesheet" href="/pages/css/contato.css">
 
-<div id="contato">
-    <h1>Contato</h1>
-</div>
+<section id="contato-principal">
+    <div class="contato-hero">
+        <h1>Entre em Contato</h1>
+        <p>Estamos aqui para ajudar! Entre em contato conosco através dos canais abaixo.</p>
+    </div>
+    
+    <div class="contato-content">
+        <div class="contato-info">
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <h3>Email</h3>
+                <p>santhyagoponciano@gmail.com</p>
+                <a href="mailto:santhyagoponciano@gmail.com" class="action-btn action-btn--secondary">Enviar Email</a>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">📱</div>
+                <h3>Telefone</h3>
+                <p>+55 11 99999-9999</p>
+                <a href="tel:+5511999999999" class="action-btn action-btn--secondary">Ligar Agora</a>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Endereço</h3>
+                <p>Rua das Flores, 123<br>São Paulo - SP</p>
+                <a href="https://www.google.com/maps/..." class="action-btn action-btn--secondary" target="_blank">Ver no Maps</a>
+            </div>
+        </div>
+        
+        <div class="contato-form">
+            <h3>Envie uma Mensagem</h3>
+            <form id="contatoForm">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="action-btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+</section>

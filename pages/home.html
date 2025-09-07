@@ -1,172 +1,145 @@
 <link rel="stylesheet" href="/pages/css/home.css">
-<section id="home-principal">
 
-    <div class="home-section-text">
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-    </div>
-
-    <div class="home-section-text">
-        <h2>Home</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-
-    </div>
-
-    <div class="home-section-text">
-        <h2>Home</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-    </div>
-
-    <div class="home-section-text">
-        <h2>Home</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-    </div>
-</section>
-<section class="home-section-image">
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <div class="carousel-slide active">
-                <img src="../img/logo.png" alt="Imagem 1">
-                <div class="slide-content">
-                    <h3>Primeira Imagem</h3>
-                    <p>Descrição da primeira imagem do carrossel</p>
-                </div>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Transforme Sua Ideia em <span class="gradient-text">Realidade Digital</span></h1>
+            <p class="hero-subtitle">Desenvolvemos soluções web modernas e eficientes que impulsionam seu negócio para o próximo nível</p>
+            <div class="hero-actions">
+                <button class="cta-primary" onclick="carregarPagina('contato')">Começar Agora</button>
+                <button class="cta-secondary" onclick="document.querySelector('.prices').scrollIntoView({behavior: 'smooth'})">Ver Planos</button>
             </div>
-            <div class="carousel-slide">
-                <img src="../img/logo.png" alt="Imagem 2">
-                <div class="slide-content">
-                    <h3>Segunda Imagem</h3>
-                    <p>Descrição da segunda imagem do carrossel</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Projetos</span>
                 </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="../img/logo.png" alt="Imagem 3">
-                <div class="slide-content">
-                    <h3>Terceira Imagem</h3>
-                    <p>Descrição da terceira imagem do carrossel</p>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Clientes</span>
                 </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="../img/logo.png" alt="Imagem 4">
-                <div class="slide-content">
-                    <h3>Quarta Imagem</h3>
-                    <p>Descrição da quarta imagem do carrossel</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="../img/logo.png" alt="Imagem 5">
-                <div class="slide-content">
-                    <h3>Quinta Imagem</h3>
-                    <p>Descrição da quinta imagem do carrossel</p>
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Anos</span>
                 </div>
             </div>
         </div>
-        
-        <!-- Controles de navegação -->
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
-        
-        <!-- Indicadores -->
-        <div class="carousel-indicators">
-            <span class="indicator active" onclick="currentSlide(1)"></span>
-            <span class="indicator" onclick="currentSlide(2)"></span>
-            <span class="indicator" onclick="currentSlide(3)"></span>
-            <span class="indicator" onclick="currentSlide(4)"></span>
-            <span class="indicator" onclick="currentSlide(5)"></span>
+        <div class="hero-visual">
+            <div class="floating-cards">
+                <div class="card card-1">💻</div>
+                <div class="card card-2">🚀</div>
+                <div class="card card-3">⚡</div>
+                <div class="card card-4">🎯</div>
+            </div>
         </div>
     </div>
 </section>
-<section class="home-section-sobre">
-    <div class="home-section-sobre-text">
-        <h1>Resumo sob</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-            It is a long established fact that a reader will be distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
-            over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-            during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-            section 1.10.32.</p>
 
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Por Que Escolher Nossos Serviços?</h2>
+            <p>Oferecemos soluções completas para impulsionar sua presença digital</p>
+        </div>
+        <div id="home-principal" class="features-grid">
+            <!-- Conteúdo será carregado dinamicamente -->
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>O Que Nossos Clientes Dizem</h2>
+            <p>Depoimentos reais de quem confia em nossos serviços</p>
+        </div>
+        <div class="testimonials-carousel">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <!-- Conteúdo será carregado dinamicamente -->
+                </div>
+                
+                <!-- Controles de navegação -->
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                    <span class="indicator" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="prices">
-    <div class="prices-text">
-        <h1>Preços</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <div class="beneficios">
-            <ul>
-                <li>Beneficio 1</li>
-                <li>Beneficio 2</li>
-                <li>Beneficio 3</li>
-                <li>Beneficio 4</li>
-                <li>Beneficio 5</li>
-                <li>Beneficio 6</li>
-                <li>Beneficio 7</li>
-                <li>Beneficio 8</li>
-                <li>Beneficio 9</li>
-                <li>Beneficio 10</li>
-            </ul>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Pronto para Transformar Seu Negócio?</h2>
+            <p>Junte-se a centenas de empresas que já confiam em nossas soluções</p>
+            <div class="cta-actions">
+                <button class="cta-primary" onclick="carregarPagina('contato')">Fale Conosco</button>
+                <button class="cta-secondary" onclick="carregarPagina('sobre')">Conheça Nossa Equipe</button>
+            </div>
         </div>
-        <button>Comprar</button>
     </div>
-    <div class="prices-text">
-        <h1>Preços</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <div class="beneficios">
-            <ul>
-                <li>Beneficio 1</li>
-                <li>Beneficio 2</li>
-                <li>Beneficio 3</li>
-                <li>Beneficio 4</li>
-                <li>Beneficio 5</li>
-                <li>Beneficio 6</li>
-                <li>Beneficio 7</li>
-                <li>Beneficio 8</li>
-                <li>Beneficio 9</li>
-                <li>Beneficio 10</li>
-            </ul>
+</section>
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Nossa Missão</h2>
+                <p>Somos uma equipe apaixonada por tecnologia e inovação, dedicada a transformar ideias em soluções digitais que fazem a diferença. Com anos de experiência no mercado, desenvolvemos projetos que não apenas atendem às expectativas, mas superam os objetivos dos nossos clientes.</p>
+                <p>Nossa abordagem combina criatividade, tecnologia de ponta e estratégia de negócios para entregar resultados excepcionais que impulsionam o crescimento e o sucesso de nossos parceiros.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <div>
+                            <h4>Foco em Resultados</h4>
+                            <p>Entregamos projetos que geram valor real para seu negócio</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <div>
+                            <h4>Desenvolvimento Ágil</h4>
+                            <p>Metodologia ágil para entregas rápidas e eficientes</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔒</span>
+                        <div>
+                            <h4>Segurança e Qualidade</h4>
+                            <p>Padrões elevados de segurança e qualidade em todos os projetos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button>Comprar</button>
     </div>
-    <div class="prices-text">
-        <h1>Preços</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        <div class="beneficios">
-            <ul>
-                <li>Beneficio 1</li>
-                <li>Beneficio 2</li>
-                <li>Beneficio 3</li>
-                <li>Beneficio 4</li>
-                <li>Beneficio 5</li>
-                <li>Beneficio 6</li>
-                <li>Beneficio 7</li>
-                <li>Beneficio 8</li>
-                <li>Beneficio 9</li>
-                <li>Beneficio 10</li>
-            </ul>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Planos que Cabem no Seu Bolso</h2>
+            <p>Escolha o plano ideal para suas necessidades e comece a transformar seu negócio hoje mesmo</p>
         </div>
-        <button>Comprar</button>
+        <div class="prices">
+            <!-- Conteúdo será carregado dinamicamente -->
+        </div>
+        <div class="pricing-footer">
+            <p>💡 <strong>Dica:</strong> Todos os planos incluem suporte técnico e atualizações de segurança</p>
+            <p>❓ Dúvidas? <a href="#" onclick="carregarPagina('contato')">Fale conosco</a> e encontre o plano perfeito para você</p>
+        </div>
     </div>
 </section>
