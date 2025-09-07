@@ -15,6 +15,9 @@ async function carregarPagina(rota) {
         const content = await res.text();
         corpo.innerHTML = content;
         
+        // Carregar CSS específico da página
+        await carregarCSS(rota);
+        
         // Carregar dados dinâmicos baseado na rota
         await carregarDadosDinamicos(rota);
         
@@ -605,6 +608,27 @@ function startAutoPlay() {
     setInterval(() => {
         changeSlide(1);
     }, 5000); // Muda slide a cada 5 segundos
+}
+
+// Função para carregar CSS dinamicamente
+async function carregarCSS(rota) {
+    // Remover CSS anterior se existir
+    const existingCSS = document.querySelector(`#css-${rota}`);
+    if (existingCSS) {
+        existingCSS.remove();
+    }
+    
+    // Carregar CSS específico da página
+    const cssPath = `pages/css/${rota}.css`;
+    try {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = cssPath;
+        link.id = `css-${rota}`;
+        document.head.appendChild(link);
+    } catch (error) {
+        console.warn(`CSS não encontrado para ${rota}:`, error);
+    }
 }
 
 // Iniciar auto-play quando a página carregar
